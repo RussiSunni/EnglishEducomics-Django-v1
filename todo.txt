@@ -1,0 +1,1 @@
+set "STRICT MODE' for MySQL

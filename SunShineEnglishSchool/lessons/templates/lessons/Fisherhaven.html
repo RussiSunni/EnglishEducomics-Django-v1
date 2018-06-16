@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<style>
+
+			body {
+				background-color:seagreen;
+				color: white;
+				font-size: 2em;
+
+
+			}
+
+
+		/*	.center {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: auto;
+			} */
+
+			.Fisherhaven {
+
+				height: 100%;
+				position: absolute;
+				z-index: 1;
+
+
+			}
+
+			.Koi {
+				height: 100%;
+				vertical-align: bottom;
+				position: absolute;
+				z-index: 2;
+
+
+			}
+
+
+
+			li {
+
+					font-size: 1em;
+
+				}
+
+			.text {
+				position: absolute;
+				right: 0;
+				z-index: 2;
+			}
+
+
+			@media only screen and (max-width: 600px){
+
+				body, html {
+					font-size: 1em;
+					width: 100%;
+					background-color:seagreen;
+
+
+				}
+
+				.Fisherhaven {
+
+					height: 100%;
+					position: absolute;
+					z-index: 1;
+					background-image: url("/media/Fisherhaven.jpg");
+					background-repeat: no-repeat;
+				}
+
+				.Koi {
+
+					position: absolute;
+					z-index: 2;
+				}
+
+				.text {
+					position: relative;
+					top: 700px;
+					font-size: 3em;
+
+				}
+
+				li {
+					width: 200vw;
+
+					font-size: 1em;
+
+				}
+
+			}
+
+		</style>
+
+	</head>
+	<body>
+
+
+
+
+
+
+			<img src="/media/koi_edit.png" class="Koi"/>
+			<img src="/media/Fisherhaven.jpg" class="Fisherhaven"/>
+
+
+		<div class="text">Welcome to Fisherhaven. <p>Who are you looking for?
+			<ul class="list">
+				<li><a href="{% url 'Fish_people_quest' %}">The cowery shell trader</a></li>
+				<li>the Royal Palace</li>
+			</ul>
+		</div>
+
+
+
+
+
+
+
+
+	</body>
+</html>

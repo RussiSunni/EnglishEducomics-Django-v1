@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			body {background-color: #d6b47e;}
+		</style>
+	</head>
+	<body>
+		<div align="center">
+			<br><br>
+			<h3>Welcome to Sunshine English School</h3><p>
+			<img src="/media/writing.jpeg" height="400" width="300">
+			<p>
+                {% block content %}
+                <div class="container">
+
+                    <form method="post">
+                        <h2>Please sign in</h2>{% csrf_token %}
+                        {{ form }}
+                        <button type="submit">sign in</button>
+                    </form>
+                </div>
+
+                {% endblock %}
+
+				I will need your name please?<p>
+
+				And some sort of password <p>
+
+				<p>
+			</form>
+
+
+			<p>
+		</div>
+	</body>
+</html>
