@@ -4,32 +4,32 @@
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" href="/static/style.css">
 		<style>
-			body {background-color: DarkGreen;}
+			body {
+			    background-color: DarkGreen;
+			}
+
 			.centerimage {
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
 				margin-top: 20px;
-
 			}
+
 			a {color:white;}
 
 
 
-@media only screen and (max-width: 600px){
-		img {
-			width: 100vw;
-			height: auto;
+            @media only screen and (max-width: 600px){
+    		img {
+    			width: 100vw;
+    			height: auto;
+    			margin-left:auto;
+    			margin-right:auto;
+    		}
 
-			margin-left:auto;
-			margin-right:auto;
-
-		}
-
-		}
+	    	}
 
 		</style>
-
 	</head>
 	<body>
 		<audio controls>
@@ -37,9 +37,8 @@
 		 </audio controls>
 
 		<div class="dialogue"><h2>Going on a quest, eh?</h2></div>
-		<img src="/media/Fairy.jpg" height="470" width="390" class="centerimage"/>
+		<img src="/media/Fairy_cutout.png" height="470" width="390" class="centerimage"/>
 
 		<div class = "continue"><h3><a href = "{% url 'travelling_Fish_people_quest' %}">to quest<a/></h3></div>
-
 	</body>
 </html>

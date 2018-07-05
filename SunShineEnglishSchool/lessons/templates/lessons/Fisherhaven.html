@@ -8,25 +8,14 @@
 				background-color:seagreen;
 				color: white;
 				font-size: 2em;
-
-
 			}
 
-
-		/*	.center {
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-				width: auto;
-			} */
 
 			.Fisherhaven {
 
 				height: 100%;
 				position: absolute;
 				z-index: 1;
-
-
 			}
 
 			.Koi {
@@ -34,17 +23,14 @@
 				vertical-align: bottom;
 				position: absolute;
 				z-index: 2;
-
-
 			}
 
 
 
 			li {
-
 					font-size: 1em;
-
 				}
+
 
 			.text {
 				position: absolute;
@@ -59,12 +45,10 @@
 					font-size: 1em;
 					width: 100%;
 					background-color:seagreen;
-
-
 				}
 
-				.Fisherhaven {
 
+				.Fisherhaven {
 					height: 100%;
 					position: absolute;
 					z-index: 1;
@@ -72,11 +56,12 @@
 					background-repeat: no-repeat;
 				}
 
-				.Koi {
 
+				.Koi {
 					position: absolute;
 					z-index: 2;
 				}
+
 
 				.text {
 					position: relative;
@@ -87,40 +72,21 @@
 
 				li {
 					width: 200vw;
-
 					font-size: 1em;
-
 				}
 
 			}
 
 		</style>
-
 	</head>
 	<body>
-
-
-
-
-
-
-			<img src="/media/koi_edit.png" class="Koi"/>
-			<img src="/media/Fisherhaven.jpg" class="Fisherhaven"/>
-
-
+	    <img src="/media/koi_edit.png" class="Koi"/>
+		<img src="/media/Fisherhaven.jpg" class="Fisherhaven"/>
 		<div class="text">Welcome to Fisherhaven. <p>Who are you looking for?
 			<ul class="list">
-				<li><a href="{% url 'Fish_people_quest' %}">The cowery shell trader</a></li>
-				<li>the Royal Palace</li>
+				<li><a href="{% url 'Fish_people_quest' %}">The cowerie shell trader</a></li>
+				<li><a href="{% url 'docks' %}">the docks</a></li>
 			</ul>
 		</div>
-
-
-
-
-
-
-
-
 	</body>
 </html>

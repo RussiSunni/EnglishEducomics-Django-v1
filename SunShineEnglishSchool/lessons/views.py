@@ -1,8 +1,20 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, render_to_response
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
+from django.views.generic import TemplateView
 
 from .models import Question
+from .forms import TradeForm
+
+
+
+def question_list(request, pk):
+    template_name='lessons/question_list.html'
+
+    def get(self, request):
+        form=TradeForm()
+        return render(request, self.template_name, {'form':form})
+
 
 
 
@@ -45,11 +57,17 @@ def map_screen(request):
 def Fisherhaven(request):
     return render(request, 'lessons/Fisherhaven.html')
 
-def Fish_people_quest(request):
-    return render(request, 'lessons/Fish_people_quest.html')
+#def Fish_people_quest(request):
+#    return render(request, 'lessons/Fish_people_quest.html')
 
 def thisway(request):
     return render(request, 'lessons/thisway.html')
+
+def reception(request):
+    return render(request, 'lessons/reception.html')
+
+def docks(request):
+    return render(request, 'lessons/docks.html')
 
 
 

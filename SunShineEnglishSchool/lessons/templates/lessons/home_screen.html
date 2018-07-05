@@ -3,9 +3,9 @@
 	<head>
 		<meta name="viewport" content="width=device-width">
 		<style>
-			body {	background-color: #d6b47e;
-
-				}
+			body {
+			    background-color: #d6b47e;
+			}
 
 			#myCanvas {
 				z-index: +1;
@@ -16,38 +16,33 @@
 				position: absolute;
 				left: 0px;
 				top: 0px;
-
 			}
 
 			a {	color:white;
 				font-size: 2em;
-
-				}
+			}
 
 			.links {
 				position: fixed;
 				bottom: 0;
 				right: 0;
 				width: 300px;
-
 			}
 
 
 			@media only screen and (max-width: 600px){
-				.links {	position: fixed;
-							bottom: 0;
-							right: 50%;
-							left: 50%;
-							text-align: center;
-
-
-						}
+				.links {
+				    position: fixed;
+					bottom: 0;
+					right: 50%;
+					left: 50%;
+					text-align: center;
+				}
 
 				a 	{
-						color:white;
-						font-size: 4em;
-						text-align:center;
-
+					color:white;
+					font-size: 4em;
+					text-align:center;
 				}
 
 			}
@@ -55,7 +50,6 @@
 
 		</style>
 		<script>
-
 				//the character
 			var canvas, ctx;
 				function init() {
@@ -87,8 +81,8 @@
 	</head>
 
 	<body onload="init();">
-    <div style="text-align:right; color:white">Welcome to your room, {{ user }}</div>
-		<div>
+    <div style="text-align:right; color:white">Welcome to your room, {{ user }}<p><p>click on characters to interact</div>
+	<!--<div>
 		<canvas id="myCanvas" width="400" height="400"></canvas>
 		<img src="/media/tanna_at_inn.jpg" />
 		</div>
@@ -99,11 +93,13 @@
 			context.font = "30pt Calibri";
 			context.fillStyle = "white";
 			context.fillText("Hi there!", 80, 80);
-		</script>
-		{{ user }}
-		<div class="links"><a href = "{% url 'quests' %}">Quests<a/><p><a href = "{% url 'achievements' %}">Achievements</a><p>
-			<a href = "{% url 'outside' %}">Go outside<a/></h3></div>
-		<div>
+		</script> -->
+		<iframe allowtransparency="true" width = "800" height = "800" src="//scratch.mit.edu/projects/embed/235140494/?autostart=false"  allowfullscreen></iframe>
+        <div class="links">
+		    <a href = "{% url 'quests' %}">Quests<a/><p><a href = "{% url 'achievements' %}">Achievements</a><p>
+			<a href = "{% url 'outside' %}">Go outside<a/><p></h3><a href = "{% url 'reception' %}">Return to reception<a/></h3>
+		</div>
+
 
 	</body>
 </html>

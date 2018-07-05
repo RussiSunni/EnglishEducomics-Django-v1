@@ -6,7 +6,7 @@
 		<style>
 
 			body {
-				font-size: 2em;
+				font-size: 1em;
 				background-color:seagreen;
 				color: white;
 			}
@@ -41,21 +41,19 @@
 
 	</head>
 	<body>
-		Choose where you want to go!
+		<p>“You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose. You're on your own. And you know what you know. And YOU are the one who'll decide where to go...”</p>
 		<div>
-		<img src="/media/Fairy.jpg" class="fairy">
+    		<img src="/media/Fairy_cutout.png" class="fairy">
 
+    		<img src="/media/map.jpg" usemap="#map"  class="map">
 
-		<img src="/media/map.jpg" usemap="#map"  class="map">
-
-		<map name="map">
-		   <area shape="rect" coords="430,600,730,750" alt="lets go to Fisherhaven" href="{% url 'Fisherhaven' %}">
-		</map>
+    		<map name="map">
+    		   <area shape="rect" coords="430,600,730,750" alt="lets go to Fisherhaven" href="{% url 'Fisherhaven' %}">
+    		</map>
 		</div>
 
-
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="jquery.rwdImageMaps.min.js"></script>
+		<script src="/static/jquery.rwdImageMaps.min.js"></script>
 		<script>
 			$(document).ready(function(e) {
 				$('img[usemap]').rwdImageMaps();
@@ -63,9 +61,11 @@
 				$('area').on('click', function() {
 					alert($(this).attr('alt') + ' clicked');
 				});
-			});
+            $(".map").click(function() {
+                $("p").text("Ahem, I believe the quest said 'Fisherhaven'");
+                });
+            });
 		</script>
-
 
 	</body>
 </html>

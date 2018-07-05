@@ -42,6 +42,16 @@
                 float:left;
 			}
 
+			.quote {
+                color:yellow;
+                border-width:3px;
+				border-style:solid;
+				background-color:darkblue;
+				padding:10px
+				width: 60%;
+				border-color: lightblue;
+			}
+
 			@media only screen and (max-width: 600px){
 
 
@@ -77,11 +87,6 @@
 
 	</head>
 	<body>
-	    <div>
-            {% for Answer in data %}
-                {{ Answer.answer }}
-                    {% endfor %}
-        </div>
 		<div class = "instructions">use the vocabulary sheet to barter with the Fish Lady for Cowery Shells.
 			<p>
 			<img src="/media/fish_person001.jpg"/>
@@ -97,12 +102,17 @@
 		</div>
 		<br>
 		<div>
-    		<form action="/Fish_people_quest.html" method="post">
+    		<form method ='POST' action="">
                 {% csrf_token %}
                 {{ form }}
-                <input type="submit" value="speak" />
+                <input type="submit" value="Speak">
             </form>
         </div>
-
+        <div class = "quote">You said:
+            {% for Answer in data %}
+                {{ Answer.answer }}
+                    {% endfor %}
+        </div>
 	</body>
 </html>
+
