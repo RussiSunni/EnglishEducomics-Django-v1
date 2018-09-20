@@ -1,106 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="viewport" content="width=device-width">
-		<style>
-			body {
-			    background-color: #d6b47e;
-			}
-
-			#myCanvas {
-				z-index: +1;
-				position: absolute;
-			}
-
-			img {margin:auto;
-				position: absolute;
-				left: 0px;
-				top: 0px;
-			}
-
-			a {	color:white;
-				font-size: 2em;
-			}
-
-			.links {
-				position: fixed;
-				bottom: 0;
-				right: 0;
-				width: 300px;
-			}
-
-
-			@media only screen and (max-width: 600px){
-				.links {
-				    position: fixed;
-					bottom: 0;
-					right: 50%;
-					left: 50%;
-					text-align: center;
-				}
-
-				a 	{
-					color:white;
-					font-size: 4em;
-					text-align:center;
-				}
-
-			}
-
-
-		</style>
-		<script>
-				//the character
-			var canvas, ctx;
-				function init() {
-			// This function is called after the page is loaded
-			// 1 - Get the canvas
-					canvas = document.getElementById('myCanvas');
-			// 2 - Get the context
-					ctx=canvas.getContext('2d');
-			// 3 - we can draw
-					setInterval(animate, 500);
-				}
-
-
-			//animate
-				function animate() {
-			// clear canvas
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-			//draw
-				x= Math.random()+10;
-				ctx.fillStyle='yellow';
-				ctx.fillRect(150, 150,100,100);
-
-				ctx.clearRect(x+175, 180, 20, 20);
-				ctx.clearRect(x+215, 180, 20, 20);
-		    }
-
-		</script>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/style.css">
 	</head>
-
-	<body onload="init();">
-    <div style="text-align:right; color:white">Welcome to your room, {{ user }}<p><p>click on characters to interact</div>
-	<!--<div>
-		<canvas id="myCanvas" width="400" height="400"></canvas>
-		<img src="/media/tanna_at_inn.jpg" />
-		</div>
-		<script type="text/javascript">
-			var canvas=document.getElementById('myCanvas');
-			var context=canvas.getContext('2d');
-
-			context.font = "30pt Calibri";
-			context.fillStyle = "white";
-			context.fillText("Hi there!", 80, 80);
-		</script> -->
-		<iframe allowtransparency="true" width = "800" height = "800" src="//scratch.mit.edu/projects/embed/235140494/?autostart=false"  allowfullscreen></iframe>
-        <div class="links">
-		    <a href = "{% url 'quests' %}">Quests<a/><p><a href = "{% url 'achievements' %}">Achievements</a><p>
-			<a href = "{% url 'outside' %}">Go outside<a/><p></h3><a href = "{% url 'reception' %}">Return to reception<a/></h3>
-		</div>
-
-
+	<div class="container">
+        <div class="row">
+            <div class="col-">
+                <div class="embed-responsive embed-responsive-4by3">
+            		<iframe allowtransparency="true" src="//scratch.mit.edu/projects/embed/235140494/?autostart=false"></iframe>
+                </div>
+            <div class="col">
+                    <strong>{{ user }}</strong>, you sit in your dorm room in the college, with your loving Familiar and trusted Fairy<p>
+                <div class="col">
+                    <ul>
+                        <li><a href = "{% url 'quests' %}">Quests<a/></li>
+                        <li><a href = "{% url 'achievements' %}">Achievements</a></li>
+                        <li><a href = "{% url 'outside' %}">Go outside<a/></li>
+                        <li><a href = "{% url 'reception' %}">Return to reception<a/></li>
+            		</ul>
+                </div>
+            </div>
+    	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
 </html>
 

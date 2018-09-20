@@ -36,8 +36,8 @@ def useful_vocabulary(request):
 def travelling(request):
     return render(request, 'lessons/travelling.html')
 
-def travelling_Fish_people_quest(request):
-    return render(request, 'lessons/travelling-Fish_people_quest.html')
+def travelling_ship(request):
+    return render(request, 'lessons/travelling_ship.html')
 
 def quests(request):
     return render(request, 'lessons/quests.html')
@@ -68,6 +68,39 @@ def reception(request):
 
 def docks(request):
     return render(request, 'lessons/docks.html')
+
+def QuestFishPrincess(request):
+    return render(request, 'lessons/QuestFishPrincess.html')
+
+def QuestTannasPast(request):
+    return render(request, 'lessons/QuestTannasPast.html')
+
+def TannasPast001(request):
+    return render(request, 'lessons/TannasPast001.html')
+
+def TannasPast002(request):
+    return render(request, 'lessons/TannasPast002.html')
+
+def TannasPast003(request):
+    return render(request, 'lessons/TannasPast003.html')
+
+def FightSequence1(request):
+    return render(request, 'lessons/fightsequence1.html')
+
+def FightSequence2(request):
+    return render(request, 'lessons/fightsequence2.html')
+
+def FightSequence3(request):
+    return render(request, 'lessons/fightsequence3.html')
+
+def FightSequence4(request):
+    return render(request, 'lessons/fightsequence4.html')
+
+def FightSequence5(request):
+    return render(request, 'lessons/fightsequence5.html')
+
+def FightSequence6(request):
+    return render(request, 'lessons/fightsequence6.html')
 
 
 
